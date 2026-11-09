@@ -1,5 +1,5 @@
 // Offline support. Network first so updates arrive straight away; the saved copy is used when you have no signal.
-const CACHE = 'fatburner-v2';
+const CACHE = 'fatburner-v3';
 const FILES = ['./', 'index.html', 'manifest.webmanifest', 'icon-180.png', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
